@@ -10,6 +10,8 @@ Adafruit_BMP085 sensor = Adafruit_BMP085();
 byte mac [] = {0x90, 0xA2, 0xDA, 0x00, 0x4A, 0xE0};
 char serverName[] = "192.168.0.14";
 int serverPort = 80;
+int sensorNumber = 205;
+int serverPaht = "/add-data";
 EthernetClient client;
 
 
@@ -64,7 +66,9 @@ void connectToServer(float temperature, float pressure) {
     client.print("POST /test ");
     client.println("HTTP/1.1");
     client.print("Host: ");
-    client.println(serverName);
+    client.print(serverName);
+    client.print("/" + sensorNumber);
+    client.println(serverPaht);
     client.println("User-Agent: Arduino/1.0");
     client.println("Connection: close");
     client.println("Content-Type: application/javascript;");
@@ -72,7 +76,7 @@ void connectToServer(float temperature, float pressure) {
     client.println(data.length());
     client.println();
     client.println(data);
-    
+
     Serial.println("complete");
 
   } else {
