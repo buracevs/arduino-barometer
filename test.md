@@ -4,11 +4,12 @@ buracevs@gmail.com
 Nationality: Moldova Republic of.
 Current place: Kraków Poland
 Blue Card is valid untill 20.09.2025
-```
+
+
 Experienced .NET developer with 10 years in software development, specializing in web development using MVC,
 API, and gRPC. Proven track record in collaborating with large teams and independently delivering 
 high-quality software solutions for diverse industries.
-```
+
 
 ### Skills Summary
 
